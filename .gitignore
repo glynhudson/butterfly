@@ -11,3 +11,4 @@ build/
 .cache/
 .env*
 .pytest_cache
+emonupload/

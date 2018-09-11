@@ -8,10 +8,21 @@ RUN apt-get update \
     python-dev \
     python-setuptools \
     ca-certificates \
+    nano \
+    git-core \
+    avrdude \
+    miniterm \
+    minicom \
  && easy_install pip \
  && pip install --upgrade setuptools \
+ && pip install -U platformio \
  && apt-get clean \
  && rm -r /var/lib/apt/lists/*
+
+
+ADD emonupload /root
+ADD emonupload/requirements.txt /root/requirements.txt
+RUN pip install --no-cache-dir -r /root/requirements.txt
 
 WORKDIR /opt
 ADD . /opt/app
