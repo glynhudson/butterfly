@@ -2,6 +2,20 @@
 
 ![](http://paradoxxxzero.github.io/assets/butterfly_2.0_1.gif)
 
+---
+
+Customised to run [emonUpload]https://github.com/openenergymonitor/emonupload
+
+Build:
+
+`docker build . -t fly`
+
+Run:
+
+`docker run --privileged --env PASSWORD=emon -p 57575:57575 fly`
+
+
+---
 
 ## Description
 
