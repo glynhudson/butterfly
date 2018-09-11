@@ -11,8 +11,6 @@ RUN apt-get update \
     nano \
     git-core \
     avrdude \
-    miniterm \
-    minicom \
  && easy_install pip \
  && pip install --upgrade setuptools \
  && pip install -U platformio \
@@ -23,6 +21,9 @@ RUN apt-get update \
 ADD emonupload /root
 ADD emonupload/requirements.txt /root/requirements.txt
 RUN pip install --no-cache-dir -r /root/requirements.txt
+
+RUN git clone https://github.com/npat-efault/picocom
+RUN cd picocom && make && strip picocom && cp picocom /usr/bin
 
 WORKDIR /opt
 ADD . /opt/app
