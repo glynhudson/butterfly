@@ -1,7 +1,5 @@
 # ƸӜƷ butterfly 3.0
 
-![](http://paradoxxxzero.github.io/assets/butterfly_2.0_1.gif)
-
 ---
 
 Customised to run [emonUpload]https://github.com/openenergymonitor/emonupload
@@ -14,6 +12,11 @@ Run:
 
 `docker run --privileged --env PASSWORD=emon -p 57575:57575 fly`
 
+Run at startup always:
+
+`docker run -dit --restart unless-stopped --privileged --env PASSWORD=emon -d -p 57575:57575 fly`
+
+
 
 ---
 
@@ -21,6 +24,7 @@ Run:
 
 Butterfly is a xterm compatible terminal that runs in your browser.
 
+![](http://paradoxxxzero.github.io/assets/butterfly_2.0_1.gif)
 
 ## Features
 
