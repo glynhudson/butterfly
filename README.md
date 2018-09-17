@@ -31,6 +31,16 @@ Run at startup always:
 
 `docker run -dit --restart unless-stopped --privileged --env PASSWORD=emon -d -p 57575:57575 fly`
 
+Navigate to:
+
+http://localhost:57575/
+
+Password `emon`
+
+Run emonupload:
+
+`./emonupload`
+
 
 
 ---
