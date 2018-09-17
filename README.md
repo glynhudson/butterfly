@@ -2,9 +2,24 @@
 
 ---
 
-Customised to run [emonUpload]https://github.com/openenergymonitor/emonupload
+Customised to run [emonUpload](https://github.com/openenergymonitor/emonupload)
 
-Build:
+```
+git clone https://github.com/glynhudson/butterfly/
+cd butterfly
+git clone https://github.com/openenergymonitor/emonupload
+cd ..
+```
+
+Check running containers:
+  
+    docker ps
+
+Stop any running containers:
+
+    docker stop $(docker ps -aq)
+    
+Build new container:
 
 `docker build . -t fly`
 
